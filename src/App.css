@@ -13,15 +13,10 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.lb-embed,
+#test1 {
+  height: 90vh;
+  border: 5px solid #61dafb;
 }
 
 .App-link {
@@ -35,4 +30,101 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes mymove {
+  from {
+    left: 20px;
+    /* width: 400px;
+    height: 400px; */
+    /* top: 10px; */
+  }
+  to {
+    left: 200px;
+    /* width: 700px;
+    height: 700px; */
+    /* top: 100px; */
+  }
+}
+
+#ts-preRenderFull-embed {
+  position: relative;
+  left: 100px;
+  animation: mymove 5s infinite;
+  width: 700px;
+  height: 700px;
+  background-color: red;
+}
+
+#root {
+  height: 2000px;
+}
+
+#prefetchIframe-test-1 {
+  border: 2px solid blue;
+}
+
+#trackingDiv {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  position: fixed;
+  left: 10px !important;
+}
+
+#test-parent {
+  background-color: red;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  border: 3px solid green;
+  animation: testAni 1s linear infinite alternate-reverse;
+}
+
+@keyframes testAni {
+  from {
+    width: 50px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+#test-child {
+  border: 2px solid blue;
+  height: 50px;
+  width: 50px;
+  position: relative;
+
+  top: 0px;
+  left: 0px;
+  /* animation: testAni 1s linear infinite alternate-reverse; */
+}
+
+#test-parent2 {
+  /* background-color: red; */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 3px solid green;
+  /* animation: testAni 1s linear infinite alternate-reverse; */
+}
+
+@keyframes testAni {
+  from {
+    width: 50px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+#test-child2 {
+  border: 2px solid blue;
+  height: 50px;
+  width: 50px;
+
+  top: 0px;
+  left: 0px;
+  /* animation: testAni 1s linear infinite alternate-reverse; */
 }
